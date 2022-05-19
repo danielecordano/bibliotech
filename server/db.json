@@ -1,0 +1,23 @@
+{
+    "authors": [
+      {
+        "id": 1,
+        "name": "Douglas Adams"
+      }
+    ],
+    "books": [
+      {
+        "id": 1,
+        "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
+        "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
+        "title": "The Hitchhiker's Guide to the Galaxy"
+      }
+    ],
+    "bookAuthors": [
+      {
+        "id": 1,
+        "authorId": 1,
+        "bookId": 1
+      }
+    ]
+  }
