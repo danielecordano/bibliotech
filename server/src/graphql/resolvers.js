@@ -50,6 +50,32 @@ const resolvers = {
       user(root, { username }, { dataSources }, info) {
         return dataSources.jsonServerApi.getUser(username);
       }
+    },
+    Mutation: {
+      signUp(root, { input }, { dataSources }, info) {
+        return dataSources.jsonServerApi.signUp(input);
+      },
+      createAuthor(root, { name }, { dataSources }, info) {
+        return dataSources.jsonServerApi.createAuthor(name);
+      },
+      createBook(root, { input }, { dataSources }, info) {
+        return dataSources.jsonServerApi.createBook(input);
+      },
+      createReview(root, { input }, { dataSources }, info) {
+        return dataSources.jsonServerApi.createReview(input);
+      },
+      deleteReview(root, {id}, {dataSources}, info) {
+        return dataSources.jsonServerApi.deleteReview(id);
+      },
+      updateReview(root, {input}, {dataSources}, info) {
+        return dataSources.jsonServerApi.updateReview(input);
+      },
+      addBooksToLibrary(root, { input }, { dataSources }, info) {
+        return dataSources.jsonServerApi.addBooksToLibrary(input);
+      },
+      removeBooksFromLibrary(root, { input }, { dataSources }, info) {
+        return dataSources.jsonServerApi.removeBooksFromLibrary(input);
+      }
     }
   };
   

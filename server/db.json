@@ -1,49 +1,77 @@
 {
-    "authors": [
-      {
-        "id": 1,
-        "name": "Douglas Adams"
-      }
-    ],
-    "books": [
-      {
-        "id": 1,
-        "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
-        "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
-        "title": "The Hitchhiker's Guide to the Galaxy"
-      }
-    ],
-    "bookAuthors": [
-      {
-        "id": 1,
-        "authorId": 1,
-        "bookId": 1
-      }
-    ],
-    "reviews": [
-      {
-        "id": 1,
-        "bookId": 1,
-        "createdAt": "2021-02-20T15:02:28.308Z",
-        "rating": 5,
-        "userId": 1,
-        "text": "This book is out of this world!"
-      }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "email": "alice@email.com",
-        "name": "Alice Liddell",
-        "username": "rabbithole84"
-      }
-    ],
-    "userBooks": [
-      {
-        "id": 1,
-        "bookId": 1,
-        "createdAt": "2021-02-20T16:01:17.511Z",
-        "userId": 1
-      }
-    ]  
-  }
+  "authors": [
+    {
+      "id": 1,
+      "name": "Douglas Adams"
+    },
+    {
+      "name": "Ursula K. Le Guin",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
+      "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
+      "title": "The Hitchhiker's Guide to the Galaxy"
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/038051284X-L.jpg",
+      "title": "The Dispossessed",
+      "id": 2
+    }
+  ],
+  "bookAuthors": [
+    {
+      "id": 1,
+      "authorId": 1,
+      "bookId": 1
+    },
+    {
+      "authorId": 2,
+      "bookId": 2,
+      "id": 2
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "createdAt": "2021-02-20T15:02:28.308Z",
+      "rating": 5,
+      "userId": 1,
+      "text": "This book is out of this world!"
+    },
+    {
+      "bookId": 2,
+      "rating": 5,
+      "userId": 1,
+      "text": "What a page turner!",
+      "createdAt": "2022-06-03T16:06:45.288Z",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "alice@email.com",
+      "name": "Alice Liddell",
+      "username": "rabbithole84"
+    },
+    {
+      "email": "jo@email.com",
+      "name": "Jo March",
+      "username": "bookworm68",
+      "id": 2
+    }
+  ],
+  "userBooks": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "createdAt": "2021-02-20T16:01:17.511Z",
+      "userId": 1
+    }
+  ]
+}
