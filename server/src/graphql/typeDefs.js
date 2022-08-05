@@ -1,21 +1,81 @@
 import { gql } from "apollo-server";
 
 const typeDefs = gql`
-  type Author {
+  enum Genre {
+    ADVENTURE
+    CHILDREN
+    CLASSICS
+    COMIC_GRAPHIC_NOVEL
+    DETECTIVE_MYSTERY
+    DYSTOPIA
+    FANTASY
+    HORROR
+    HUMOR
+    NON_FICTION
+    SCIENCE_FICTION
+    ROMANCE
+    THRILLER
+    WESTERN
+  }
+
+  enum AuthorOrderBy {
+    NAME_ASC
+    NAME_DESC
+  }
+
+  enum BookOrderBy {
+    TITLE_ASC
+    TITLE_DESC
+  }
+
+  enum LibraryOrderBy {
+    ADDED_ON_ASC
+    ADDED_ON_DESC
+  }
+
+  enum ReviewOrderBy {
+    REVIEWED_ON_ASC
+    REVIEWED_ON_DESC
+  }
+
+  enum SearchOrderBy {
+    RESULT_ASC
+    RESULT_DESC
+  }
+
+  interface Person {
+    id: ID!
+    name: String!
+  }
+
+  union BookResult = Book | Author
+
+  type Author implements Person {
     id: ID!
     books: [Book]
     name: String!
+  }
+
+  type Authors {
+    results: [Author]
+    pageInfo: PageInfo
   }
 
   type Book {
     id: ID!
     authors: [Author]
     cover: String
-    reviews: [Review]
+    genre: Genre
+    reviews(limit: Int = 20, orderBy: ReviewOrderBy, page: Int): Reviews
     summary: String
     title: String!
   }
-  
+
+  type Books {
+    results: [Book]
+    pageInfo: PageInfo
+  }
+
   type Review {
     id: ID!
     book: Book
@@ -25,27 +85,51 @@ const typeDefs = gql`
     text: String
   }
 
-    type User {
-      id: ID!
-      email: String!
-      library: [Book]
-      name: String!
-      reviews: [Review]
-      username: String!
-    }
+  type Reviews {
+    results: [Review]
+    pageInfo: PageInfo
+  }
+
+  type User implements Person {
+    id: ID!
+    email: String!
+    library(limit: Int = 20, orderBy: LibraryOrderBy, page: Int): Books
+    name: String!
+    reviews(limit: Int = 20, orderBy: ReviewOrderBy, page: Int): Reviews
+    username: String!
+  }
+
+  type PageInfo {
+    hasNextPage: Boolean
+    hasPrevPage: Boolean
+    page: Int
+    perPage: Int
+    totalCount: Int
+  }
 
   type Query {
     author(id: ID!): Author
-    authors: [Author]
+    authors(limit: Int = 20, orderBy: AuthorOrderBy, page: Int): Authors
     book(id: ID!): Book
-    books: [Book]
+    books(limit: Int = 20, orderBy: BookOrderBy, page: Int): Books
     review(id: ID!): Review
+    searchPeople(
+      exact: Boolean = false
+      orderBy: SearchOrderBy
+      query: String!
+    ): [Person]
+    searchBooks(
+      exact: Boolean = false
+      orderBy: SearchOrderBy
+      query: String!
+    ): [BookResult]
     user(username: String!): User
   }
 
   input CreateBookInput {
     authorIds: [ID]
     cover: String
+    genre: Genre
     summary: String
     title: String!
   }

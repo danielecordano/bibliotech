@@ -7,6 +7,14 @@
     {
       "name": "Ursula K. Le Guin",
       "id": 2
+    },
+    {
+      "name": "Alice Walker",
+      "id": 3
+    },
+    {
+      "name": "David McCullough",
+      "id": 4
     }
   ],
   "books": [
@@ -20,6 +28,20 @@
       "cover": "http://covers.openlibrary.org/b/isbn/038051284X-L.jpg",
       "title": "The Dispossessed",
       "id": 2
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9781529034530-L.jpg",
+      "genre": "SCIENCE_FICTION",
+      "title": "The Restaurant at the End of the Universe",
+      "id": 3
+    },
+    {
+      "title": "The Color Purple",
+      "id": 4
+    },
+    {
+      "title": "John Adams",
+      "id": 5
     }
   ],
   "bookAuthors": [
@@ -32,6 +54,21 @@
       "authorId": 2,
       "bookId": 2,
       "id": 2
+    },
+    {
+      "authorId": 1,
+      "bookId": 3,
+      "id": 3
+    },
+    {
+      "authorId": 3,
+      "bookId": 4,
+      "id": 4
+    },
+    {
+      "authorId": 4,
+      "bookId": 5,
+      "id": 5
     }
   ],
   "reviews": [
