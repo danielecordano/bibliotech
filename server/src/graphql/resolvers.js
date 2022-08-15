@@ -1,5 +1,10 @@
+import DateTimeType from "./scalars/DateTimeType.js";
+import RatingType from "./scalars/RatingType.js";
+
 const resolvers = {
-  AuthorOrderBy: {
+    DateTime: DateTimeType,
+    Rating: RatingType,
+    AuthorOrderBy: {
     NAME_ASC: "name_asc",
     NAME_DESC: "name_desc"
   },

@@ -101,6 +101,13 @@
       "name": "Jo March",
       "username": "bookworm68",
       "id": 2
+    },
+    {
+      "createdAt": "2022-08-15T16:19:19.844Z",
+      "email": "jojo@email.com",
+      "name": "JoJo",
+      "username": "word68",
+      "id": 3
     }
   ],
   "userBooks": [
