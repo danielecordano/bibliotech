@@ -1,4 +1,4 @@
-import { gql } from "apollo-server";
+import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
 directive @unique(
@@ -16,6 +16,10 @@ directive @unique(
   An ISO 8601-encoded UTC date string.
   """
   scalar DateTime
+  """
+  A strong password.
+  """
+  scalar Password
   """
   An integer-based rating from 1 (low) to 5 (high).
   """
@@ -111,6 +115,16 @@ directive @unique(
     results: [Author]
     "Information to assist with pagination."
     pageInfo: PageInfo
+  }
+
+  """
+  A currently authenticated user and their valid JWT.
+  """
+  type AuthPayload {
+    "The logged-in user."
+    viewer: User
+    "A JWT issued at the time of the user's most recent authentication."
+    token: String
   }
 
   """
@@ -255,6 +269,13 @@ directive @unique(
   Provides data to create a user.
   """
   input SignUpInput {
+    """
+    The user's chosen password.
+
+    It must be a minimum of 8 characters in length and contain 1 lowercase
+    letter, 1 uppercase letter, 1 number, and 1 special character.
+    """
+    password: Password!
     "The email address of the user (must be unique)."
     email: String! @unique(path: "users")
     "The full name of the user."
@@ -326,6 +347,8 @@ directive @unique(
     ): [Person]
     "Retrieves a single user by username."
     user(username: String!): User
+    "Retrieves the currently authenticated user."
+    viewer: User
   }
 
   type Mutation {
@@ -341,8 +364,10 @@ directive @unique(
     deleteReview(id: ID!): ID!
     "Remove books currently in a user's library."
     removeBooksFromLibrary(input: UpdateLibraryBooksInput!): User!
+    "Authenticates an existing user."
+    login(password: String!, username: String!): AuthPayload!
     "Creates a new user."
-    signUp(input: SignUpInput!): User!
+    signUp(input: SignUpInput!): AuthPayload!
     "Updates a review."
     updateReview(input: UpdateReviewInput!): Review!
   }

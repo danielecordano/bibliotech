@@ -1,8 +1,8 @@
 {
   "authors": [
     {
-      "id": 1,
-      "name": "Douglas Adams"
+      "name": "Douglas Adams",
+      "id": 1
     },
     {
       "name": "Ursula K. Le Guin",
@@ -19,10 +19,10 @@
   ],
   "books": [
     {
-      "id": 1,
       "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
       "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
-      "title": "The Hitchhiker's Guide to the Galaxy"
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "id": 1
     },
     {
       "cover": "http://covers.openlibrary.org/b/isbn/038051284X-L.jpg",
@@ -46,9 +46,9 @@
   ],
   "bookAuthors": [
     {
-      "id": 1,
       "authorId": 1,
-      "bookId": 1
+      "bookId": 1,
+      "id": 1
     },
     {
       "authorId": 2,
@@ -73,12 +73,12 @@
   ],
   "reviews": [
     {
-      "id": 1,
       "bookId": 1,
       "createdAt": "2021-02-20T15:02:28.308Z",
       "rating": 5,
       "userId": 1,
-      "text": "This book is out of this world!"
+      "text": "This book is out of this world!",
+      "id": 1
     },
     {
       "bookId": 2,
@@ -91,10 +91,10 @@
   ],
   "users": [
     {
-      "id": 1,
       "email": "alice@email.com",
       "name": "Alice Liddell",
-      "username": "rabbithole84"
+      "username": "rabbithole84",
+      "id": 1
     },
     {
       "email": "jo@email.com",
@@ -103,11 +103,17 @@
       "id": 2
     },
     {
-      "createdAt": "2022-08-15T16:19:19.844Z",
       "email": "jojo@email.com",
       "name": "JoJo",
       "username": "word68",
       "id": 3
+    },
+    {
+      "email": "scout@email.com",
+      "name": "Scout Finch",
+      "password": "f6b7e61e55466bee5b66189bc857851b:a9090f325fd16d2fe42106a88b071c5bbc5c5a75366bc911ac9fa5e9e86fceebf28ba06fd46da3b16bd1d48b24feba7035b823643c985b3ec1bfcda9ca49baf8",
+      "username": "mockingbird60",
+      "id": 4
     }
   ],
   "userBooks": [

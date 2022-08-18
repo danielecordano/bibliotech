@@ -1,6 +1,13 @@
-import { ForbiddenError, UserInputError } from "apollo-server";
+import {
+  AuthenticationError,
+  ForbiddenError,
+  UserInputError
+} from "apollo-server-express";
 import { RESTDataSource } from "apollo-datasource-rest";
+import jwt from "jsonwebtoken";
 import parseLinkHeader from "parse-link-header";
+
+import { hashPassword, verifyPassword } from "../../utils/passwords.js";
 
 class JsonServerApi extends RESTDataSource {
   baseURL = process.env.REST_API_BASE_URL;
@@ -55,15 +62,6 @@ class JsonServerApi extends RESTDataSource {
     });
 
     return results;
-  }
-
-  async signUp({ email, name, username }) {
-    return this.post("/users", {
-      createdAt: new Date().toISOString(),
-      email,
-      name,
-      username
-    });
   }
 
   getAuthorById(id) {
@@ -307,6 +305,47 @@ class JsonServerApi extends RESTDataSource {
     }
 
     return null;
+  }
+
+  async signUp({ email, name, password, username }) {
+    const passwordHash = await hashPassword(password);
+    const user = await this.post("/users", {
+      email,
+      name,
+      password: passwordHash,
+      username
+    });
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, {
+      algorithm: "HS256",
+      subject: user.id.toString(),
+      expiresIn: "1d"
+    });
+
+    return { token, viewer: user };
+  }
+
+  async login({ password, username }) {
+    const user = await this.getUser(username);
+
+    if (!user) {
+      throw new AuthenticationError(
+        "User with that username does not exist"
+      );
+    }
+
+    const isValidPassword = await verifyPassword(password, user.password);
+
+    if (!isValidPassword) {
+      throw new AuthenticationError("Username or password is incorrect");
+    }
+
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, {
+      algorithm: "HS256",
+      subject: user.id.toString(),
+      expiresIn: "1d"
+    });
+
+    return { token, viewer: user };
   }
 }
 

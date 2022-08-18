@@ -1,8 +1,10 @@
 import DateTimeType from "./scalars/DateTimeType.js";
+import PasswordType from "./scalars/PasswordType.js";
 import RatingType from "./scalars/RatingType.js";
 
 const resolvers = {
     DateTime: DateTimeType,
+    Password: PasswordType,
     Rating: RatingType,
     AuthorOrderBy: {
     NAME_ASC: "name_asc",
@@ -86,19 +88,28 @@ const resolvers = {
     review(root, { id }, { dataSources }, info) {
       return dataSources.jsonServerApi.getReviewById(id);
     },
-    user(root, { username }, { dataSources }, info) {
-      return dataSources.jsonServerApi.getUser(username);
-    },
     searchPeople(root, args, {dataSources}, info) {
       return dataSources.jsonServerApi.searchPeople(args);
     },
     searchBooks(root, args, {dataSources}, info) {
       return dataSources.jsonServerApi.searchBooks(args);
+    },
+    user(root, { username }, { dataSources }, info) {
+      return dataSources.jsonServerApi.getUser(username);
+    },
+    viewer(root, args, { dataSources, user }, info) {
+      if (user?.username) {
+        return dataSources.jsonServerApi.getUser(user.username);
+      }
+      return null;
     }
   },
   Mutation: {
     signUp(root, { input }, { dataSources }, info) {
       return dataSources.jsonServerApi.signUp(input);
+    },
+    login(root, args, { dataSources }, info) {
+      return dataSources.jsonServerApi.login(args);
     },
     createAuthor(root, { name }, { dataSources }, info) {
       return dataSources.jsonServerApi.createAuthor(name);
