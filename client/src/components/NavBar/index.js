@@ -4,7 +4,7 @@ import Button from "../Button";
 
 function NavBar() {
   const history = useHistory();
-  
+
   return (
     <header className="bg-white border-b border-gray-200 border-solid">
       <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-lg px-8 py-8 w-full">
