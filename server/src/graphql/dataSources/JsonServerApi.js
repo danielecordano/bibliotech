@@ -232,11 +232,11 @@ class JsonServerApi extends RESTDataSource {
     );
     const existingUserBooks = response.flat();
     const newBookIds = bookIds.filter(
-      bookId => !existingUserBooks.find(book => book.id === parseInt(bookId))
+      bookId => !existingUserBooks.find(book => book.bookId === parseInt(bookId))
     );
 
     await Promise.all(
-      bookIds.map(bookId =>
+      newBookIds.map(bookId =>
         this.post("/userBooks", {
           bookId: parseInt(bookId),
           createdAt: new Date().toISOString(),
