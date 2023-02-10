@@ -111,6 +111,9 @@ const resolvers = {
     login(root, args, { dataSources }, info) {
       return dataSources.jsonServerApi.login(args);
     },
+    logout(root, args, context, info) {
+      return true;
+    },
     createAuthor(root, { name }, { dataSources }, info) {
       return dataSources.jsonServerApi.createAuthor(name);
     },

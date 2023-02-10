@@ -1,47 +1,217 @@
 {
   "authors": [
     {
-      "name": "Douglas Adams",
+      "name": "Chinua Achebe",
       "id": 1
     },
     {
-      "name": "Ursula K. Le Guin",
+      "name": "Douglas Adams",
       "id": 2
     },
     {
-      "name": "Alice Walker",
+      "name": "Jane Austen",
       "id": 3
     },
     {
-      "name": "David McCullough",
+      "name": "Ray Bradbury",
       "id": 4
+    },
+    {
+      "name": "Octavia E. Butler",
+      "id": 5
+    },
+    {
+      "name": "Mark Carwardine",
+      "id": 6
+    },
+    {
+      "name": "Michael Crichton",
+      "id": 7
+    },
+    {
+      "name": "F. Scott Fitzgerald",
+      "id": 8
+    },
+    {
+      "name": "Ursula K. Le Guin",
+      "id": 9
+    },
+    {
+      "name": "Joseph Heller",
+      "id": 10
+    },
+    {
+      "name": "Harper Lee",
+      "id": 11
+    },
+    {
+      "name": "Herman Melville",
+      "id": 12
+    },
+    {
+      "name": "Alan Moore",
+      "id": 13
+    },
+    {
+      "name": "George Orwell",
+      "id": 14
+    },
+    {
+      "name": "Mary Shelley",
+      "id": 15
+    },
+    {
+      "name": "Dr. Seuss",
+      "id": 16
+    },
+    {
+      "name": "J.R.R. Tolkien",
+      "id": 17
+    },
+    {
+      "name": "Alice Walker",
+      "id": 18
     }
   ],
   "books": [
     {
-      "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
-      "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
-      "title": "The Hitchhiker's Guide to the Galaxy",
+      "cover": "http://covers.openlibrary.org/b/isbn/9780435905255-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "Things Fall Apart",
       "id": 1
     },
     {
-      "cover": "http://covers.openlibrary.org/b/isbn/038051284X-L.jpg",
-      "title": "The Dispossessed",
+      "cover": "http://covers.openlibrary.org/b/isbn/9780671461492-L.jpg",
+      "genre": "SCIENCE_FICTION",
+      "summary": "After a Vogon constructor fleet destroys Earth to make way for a hyperspace bypass, the last surviving man, Arthur Dent, embarks on an interstellar adventure with his friend Ford Prefect (who, apparently, was an alien all along).",
+      "title": "The Hitchhiker's Guide to the Galaxy",
       "id": 2
     },
     {
-      "cover": "http://covers.openlibrary.org/b/isbn/9781529034530-L.jpg",
-      "genre": "SCIENCE_FICTION",
-      "title": "The Restaurant at the End of the Universe",
+      "cover": "http://covers.openlibrary.org/b/isbn/9780517582152-L.jpg",
+      "genre": "NON_FICTION",
+      "summary": "",
+      "title": "Last Chance to See",
       "id": 3
     },
     {
-      "title": "The Color Purple",
+      "cover": "http://covers.openlibrary.org/b/isbn/9780141199528-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "Emma",
       "id": 4
     },
     {
-      "title": "John Adams",
+      "cover": "https://covers.openlibrary.org/b/id/9277716-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "Pride and Prejudice",
       "id": 5
+    },
+    {
+      "summary": "",
+      "genre": "DYSTOPIA",
+      "title": "Fahrenheit 451",
+      "id": 6
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/588480-L.jpg",
+      "genre": "SCIENCE_FICTION",
+      "summary": "",
+      "title": "Kindred",
+      "id": 7
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780394588162-L.jpg",
+      "genre": "THRILLER",
+      "summary": "",
+      "title": "Jurassic Park",
+      "id": 8
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780020198819-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "The Great Gatsby",
+      "id": 9
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/6492681-L.jpg",
+      "genre": "SCIENCE_FICTION",
+      "summary": "",
+      "title": "The Dispossessed",
+      "id": 10
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780099529125-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "Catch-22",
+      "id": 11
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/0397001517-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "To Kill a Mockingbird",
+      "id": 12
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/9338872-L.jpg",
+      "genre": "CLASSICS",
+      "summary": "",
+      "title": "Moby Dick",
+      "id": 13
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/7247917-L.jpg",
+      "genre": "COMIC_GRAPHIC_NOVEL",
+      "summary": "",
+      "title": "Watchmen",
+      "id": 14
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780140009729-L.jpg",
+      "genre": "DYSTOPIA",
+      "summary": "",
+      "title": "1984",
+      "id": 15
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/560359-L.jpg",
+      "genre": "HORROR",
+      "summary": "Victor Frankenstein, a brilliant young scientist, takes it upon himself to create a monster. Literally. From spare parts. Afterward, things go predictably sideways as a result of his hubris. Spoiler alert: many people die.",
+      "title": "Frankenstein",
+      "id": 16
+    },
+    {
+      "cover": "https://covers.openlibrary.org/b/id/11343-L.jpg",
+      "genre": "CHILDREN",
+      "summary": "",
+      "title": "The Cat in the Hat",
+      "id": 17
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780261103344-L.jpg",
+      "genre": "FANTASY",
+      "summary": "",
+      "title": "The Hobbit",
+      "id": 18
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780007322497-L.jpg",
+      "genre": "FANTASY",
+      "summary": "",
+      "title": "The Fellowship of the Ring",
+      "id": 19
+    },
+    {
+      "cover": "http://covers.openlibrary.org/b/isbn/9780151191536-L.jpg",
+      "title": "The Color Purple",
+      "summary": "",
+      "genre": "CLASSICS",
+      "id": 20
     }
   ],
   "bookAuthors": [
@@ -56,72 +226,160 @@
       "id": 2
     },
     {
-      "authorId": 1,
+      "authorId": 2,
       "bookId": 3,
       "id": 3
     },
     {
-      "authorId": 3,
-      "bookId": 4,
+      "authorId": 6,
+      "bookId": 3,
       "id": 4
     },
     {
-      "authorId": 4,
-      "bookId": 5,
+      "authorId": 3,
+      "bookId": 4,
       "id": 5
+    },
+    {
+      "authorId": 3,
+      "bookId": 5,
+      "id": 6
+    },
+    {
+      "authorId": 4,
+      "bookId": 6,
+      "id": 7
+    },
+    {
+      "authorId": 5,
+      "bookId": 7,
+      "id": 8
+    },
+    {
+      "authorId": 7,
+      "bookId": 8,
+      "id": 9
+    },
+    {
+      "authorId": 8,
+      "bookId": 9,
+      "id": 10
+    },
+    {
+      "authorId": 9,
+      "bookId": 10,
+      "id": 11
+    },
+    {
+      "authorId": 10,
+      "bookId": 11,
+      "id": 12
+    },
+    {
+      "authorId": 11,
+      "bookId": 12,
+      "id": 13
+    },
+    {
+      "authorId": 12,
+      "bookId": 13,
+      "id": 14
+    },
+    {
+      "authorId": 13,
+      "bookId": 14,
+      "id": 15
+    },
+    {
+      "authorId": 14,
+      "bookId": 15,
+      "id": 16
+    },
+    {
+      "authorId": 15,
+      "bookId": 16,
+      "id": 17
+    },
+    {
+      "authorId": 16,
+      "bookId": 17,
+      "id": 18
+    },
+    {
+      "authorId": 17,
+      "bookId": 18,
+      "id": 19
+    },
+    {
+      "authorId": 17,
+      "bookId": 19,
+      "id": 20
+    },
+    {
+      "authorId": 18,
+      "bookId": 20,
+      "id": 21
     }
   ],
   "reviews": [
     {
-      "bookId": 1,
-      "createdAt": "2021-02-20T15:02:28.308Z",
+      "bookId": 2,
       "rating": 5,
       "userId": 1,
-      "text": "This book is out of this world!",
+      "text": "This book is out of this world.",
+      "createdAt": "2021-03-12T15:02:28.308Z",
       "id": 1
     },
     {
       "bookId": 2,
-      "rating": 5,
-      "userId": 1,
-      "text": "What a page turner!",
-      "createdAt": "2022-06-03T16:06:45.288Z",
-      "id": 3
+      "rating": 4,
+      "userId": 2,
+      "text": "I thought it was pretty good.",
+      "createdAt": "2021-03-14T15:02:28.308Z",
+      "id": 2
     }
   ],
   "users": [
     {
       "email": "alice@email.com",
       "name": "Alice Liddell",
+      "password": "0bf8ebcb70eb8941e259537e9e2eb6e2:c1623b4971943812714cfdf5dee327af97e4b877321694638e22f7ec2cab34203e8fb49d44b6378b1af56e903d6142624a0956a85b29a86e285bbd81190072d4",
       "username": "rabbithole84",
       "id": 1
     },
     {
       "email": "jo@email.com",
       "name": "Jo March",
+      "password": "0bf8ebcb70eb8941e259537e9e2eb6e2:c1623b4971943812714cfdf5dee327af97e4b877321694638e22f7ec2cab34203e8fb49d44b6378b1af56e903d6142624a0956a85b29a86e285bbd81190072d4",
       "username": "bookworm68",
       "id": 2
     },
     {
-      "email": "jojo@email.com",
-      "name": "JoJo",
-      "username": "word68",
+      "email": "daniele.cordano@email.com",
+      "name": "Daniele Cordano",
+      "password": "0af6e00e102b82a9cbc792d34099eeed:03bbbe995fad4e305ee9efc396786d2ba3e02c24d8d74c0b64c7ba9d8409b37324485a78894cbe170293438d7dcceff935df242999d19107da18d6c4acb2d19e",
+      "username": "danielecordano",
       "id": 3
-    },
-    {
-      "email": "scout@email.com",
-      "name": "Scout Finch",
-      "password": "f6b7e61e55466bee5b66189bc857851b:a9090f325fd16d2fe42106a88b071c5bbc5c5a75366bc911ac9fa5e9e86fceebf28ba06fd46da3b16bd1d48b24feba7035b823643c985b3ec1bfcda9ca49baf8",
-      "username": "mockingbird60",
-      "id": 4
     }
   ],
   "userBooks": [
     {
-      "id": 1,
-      "bookId": 1,
-      "createdAt": "2021-02-20T16:01:17.511Z",
-      "userId": 1
+      "bookId": 2,
+      "createdAt": "2021-03-12T16:01:17.511Z",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "bookId": 8,
+      "createdAt": "2023-02-10T10:07:03.522Z",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "bookId": 15,
+      "createdAt": "2023-02-10T10:07:03.522Z",
+      "userId": 3,
+      "id": 3
     }
   ]
 }

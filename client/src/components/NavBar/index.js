@@ -1,9 +1,20 @@
 import { Link, useHistory } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 
+import { Logout } from "../../graphql/mutations";
+import { useAuth } from "../../context/AuthContext";
 import Button from "../Button";
 
 function NavBar() {
+  const { clearSessionData, isAuthenticated } = useAuth();
   const history = useHistory();
+
+  const [logout] = useMutation(Logout, {
+    onCompleted: () => {
+      clearSessionData();
+      history.push("/login");
+    }
+  });
 
   return (
     <header className="bg-white border-b border-gray-200 border-solid">
@@ -15,12 +26,24 @@ function NavBar() {
           <h1>Bibliotech</h1>
         </Link>
         <div className="flex items-center sm:justify-end mt-2 sm:mt-0">
+          {isAuthenticated() && (
+            <Link to="/home">
+              <span className="font-semibold mr-4 text-sm sm:text-base text-red-600">
+                My Library
+              </span>
+            </Link>
+          )}
           <Button
             onClick={event => {
               event.preventDefault();
-              history.push("/login");
+
+              if (isAuthenticated()) {
+                logout();
+              } else {
+                history.push("/login");
+              }
             }}
-            text="Log In"
+            text={isAuthenticated() ? "Log out" : "Log In"}
           />
         </div>
       </div>

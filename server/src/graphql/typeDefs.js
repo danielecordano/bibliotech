@@ -366,6 +366,8 @@ directive @unique(
     removeBooksFromLibrary(input: UpdateLibraryBooksInput!): User!
     "Authenticates an existing user."
     login(password: String!, username: String!): AuthPayload!
+    "Logs an authenticated user out."
+    logout: Boolean!
     "Creates a new user."
     signUp(input: SignUpInput!): AuthPayload!
     "Updates a review."
